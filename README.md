@@ -17,12 +17,12 @@ GitHub 与 Gitee 使用同一个本地仓
 
 以 Windows10 系统为例，安装 git 后，任意空白位置点击右键，会显示有 git 相关内容。
 
-![Win10安装git-右键](E:\Git\testgit\fig\Win10安装git-右键.png)
+![Win10安装git-右键](.\fig\Win10安装git-右键.png)
 ![Win10安装git-右键](https://github.com/liuzhihao-cn/learngit/blob/main/fig/%E5%90%AF%E5%8A%A8git.png)
 
 ### 基本操作指令
 
-![git操作指令关系](E:\Git\testgit\fig\git操作指令关系.png)
+![git操作指令关系](.\fig\git操作指令关系.png)
 
 #### 基本设置
 
@@ -189,21 +189,21 @@ $ git push -u gitee master				# 下载 Gitee 远程仓库 master 分支代码
 1. 创建一新文件夹，并打开
 2. 空白位置处右键，点击 [Git Bash Here]，会启动 git 终端
 
-![启动git](E:\Git\testgit\fig\启动git.png)
+![启动git](.\fig\启动git.png)
 
 3. 使用**`$ git config --global user.name "[name]"`**  和 **`$ git config --global user.email "[email address]"`** 指令设置全局用户名和用户邮箱地址
 
-   ![设置用户名](E:\Git\testgit\fig\设置用户名.png)![设置邮箱地址](E:\Git\testgit\fig\设置邮箱地址.png)
+   ![设置用户名](.\fig\设置用户名.png)![设置邮箱地址](.\fig\设置邮箱地址.png)
 
 4. 输入： `git init` 指令，初始化仓库，建立一个新的本地空仓库。
 
-![初始化仓库](E:\Git\testgit\fig\初始化仓库.png)
+![初始化仓库](.\fig\初始化仓库.png)
 
 **修改 git 终端字体大小**
 
 启动 git 终端，右键选择 `options` ，选择 `Text` 点击`Select`，
 
-![git终端修改字体大小](E:\Git\testgit\fig\git终端修改字体大小.png)
+![git终端修改字体大小](.\fig\git终端修改字体大小.png)
 
 ## git 实现本地仓库与 GitHub 和 Gitee 关联
 
@@ -243,9 +243,9 @@ $ git push github main
 $ git push gitee master
 ```
 
-![推送GitHub](E:\Git\testgit\fig\推送GitHub.png)
+![推送GitHub](.\fig\推送GitHub.png)
 
-![推送Gitee](E:\Git\testgit\fig\推送Gitee.png)
+![推送Gitee](.\fig\推送Gitee.png)
 
 
 
