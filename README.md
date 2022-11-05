@@ -137,7 +137,7 @@ GitHub 与 Gitee 使用同一个本地仓
 关联远程仓库
 
 ```git
-$ git remote add [shortname] [url]  # 关联远程版本库
+$ git remote add [shortname] [url]  	# 关联远程版本库
 $ git remote add github [url]		# 关联 GitHub 远程仓库
 $ git remote add gitee [url]		# 关联 Gitee 远程仓库
 ```
@@ -160,8 +160,8 @@ $ git remote add gitee [url]		# 关联 Gitee 远程仓库
 $ git pull [shortname] [local_branch]:[remote_branch]	# 下载远程仓库代码 本地与远程分支相同，可省略远程分支名
 
 $ git pull
-$ git pull github main				# 下载 GitHub 远程仓库 main 分支代码
-$ git pull gitee master				# 下载 Gitee 远程仓库 master 分支代码
+$ git pull github main					# 下载 GitHub 远程仓库 main 分支代码
+$ git pull gitee master					# 下载 Gitee 远程仓库 master 分支代码
 ```
 
 
@@ -174,8 +174,8 @@ $ git pull gitee master				# 下载 Gitee 远程仓库 master 分支代码
 
 ```git 
 $ git push -u [shortname] [local_branch]:[remote_branch] 	# 下载远程仓库代码 本地与远程分支相同，可省略远程分支名
-$ git push -u github main				# 下载 GitHub 远程仓库 main 分支代码
-$ git push -u gitee master				# 下载 Gitee 远程仓库 master 分支代码
+$ git push -u github main					# 下载 GitHub 远程仓库 main 分支代码
+$ git push -u gitee master					# 下载 Gitee 远程仓库 master 分支代码
 ```
 
 
@@ -263,35 +263,35 @@ $ git push gitee master
 
 ``` git
 1.
-git init # 初始化仓库
+git init 				# 初始化仓库
 
 2.
 git remote add github [github-URL]	# 本地仓库关联 github 远程仓库
 git remote add gitee [gitee-URL]	# 本地仓库关联 gitee 远程仓库
 
 3.
-git remote -v	# 查看关联远程仓库信息
+git remote -v				# 查看关联远程仓库信息
 
 4.
 # 下面两条指令二选一
-git pull github main:mastr	# 拉取远程 github 仓库文件至本地
-git pull gitee master:mastr	# 拉取远程 github 仓库文件至本地
+git pull github main:mastr		# 拉取远程 github 仓库文件至本地
+git pull gitee master:mastr		# 拉取远程 github 仓库文件至本地
 
 5.
 git branch --set-upstream-to=origin/master mastr # 本地master设置为远程master  此条指令可以不用，目前未用到
 
 6.
-git status 	# 查看有改动的文件和文件夹
+git status 				# 查看有改动的文件和文件夹
 
 7.
-git add . 	# 工作区改动的文件和文件夹添加至暂存区
+git add . 				# 工作区改动的文件和文件夹添加至暂存区
 
 8.
-git commit -m "添加的注释"	# 暂存区文件提交至本地仓库
+git commit -m "添加的注释"		    # 暂存区文件提交至本地仓库
 
 9.
-git push github master:main	 # 本地仓库推送至 github 远程仓库
-git push gitee master:master # 本地仓库推送至 gitee 远程仓库
+git push github master:main		# 本地仓库推送至 github 远程仓库
+git push gitee master:master 		# 本地仓库推送至 gitee 远程仓库
 ```
 
 
@@ -302,13 +302,13 @@ git push gitee master:master # 本地仓库推送至 gitee 远程仓库
 
 ```git
 1.
-git clone [URL] 	# 克隆远程仓库地址
+git clone [URL] 		# 克隆远程仓库地址
 
 2.
 git pull			# 修改之前先拉取远程仓库文件
 git status			# 克隆之后，做修改后，查看修改文件和文件夹
 git add .			# 添加修改文件和文件夹至暂存区
-git commit -m ""	# 提交至本地仓库
+git commit -m ""		# 提交至本地仓库
 
 3.
 git push			# 将本地仓库推动到远程
