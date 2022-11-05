@@ -209,9 +209,11 @@ $ git push -u gitee master				# 下载 Gitee 远程仓库 master 分支代码
 
 #### 远程仓库操作
 
-首先分别找到 GitHub 和 Gitee 配置公钥的地方，把用户主目录下的 **.ssh\id_rsa.pub** 文件中的内容粘贴进去。
+首先生成公钥：`ssh-keygen -t rsa -C "你的github邮箱"` ，生成的公钥存储与**C:\Users\用户名\.ssh** 目录下的 **id_rsa.pud** 文件中；
 
-然后在 GitHub 和 Gitee 上分别建立相同名称的仓库，如 **learngit** ，此处不赘述远端新建仓库过程。
+然后分别找到 GitHub 和 Gitee 配置公钥的地方，把用户主目录下的 **.ssh\id_rsa.pub** 文件中的内容粘贴进去。
+
+之后在 GitHub 和 Gitee 上分别建立相同名称的仓库，如 **learngit** ，此处不赘述远端新建仓库过程。下面介绍本地仓库关联远程仓库操作。
 
 #### 本地操作
 
@@ -236,7 +238,7 @@ $ git remote add gitee [giteeRepoURL]
 $ git remote -v
 ```
 
-这时在本地进行相应的修改操作，只要分别执行下面这两条语句（不分先后顺序），就可以将本地commit信息同时push到两个远程仓库的主分支（master）中。
+这时在本地进行相应的修改操作，并添加到本地仓库之后，只要分别执行下面这两条语句（不分先后顺序），就可以将本地commit信息push到两个远程仓库的主分支（master）中。
 
 ```git
 $ git push github main
@@ -246,6 +248,73 @@ $ git push gitee master
 ![推送GitHub](.\fig\推送GitHub.png)
 
 ![推送Gitee](.\fig\推送Gitee.png)
+
+
+
+## 多台设备
+
+第一步操作同样是生成设备的公钥，和填写到 GitHub 和 Gitee 个人账号的SSH公钥中。
+
+第二步关联或者克隆远程仓库只本地
+
+	1. 本地仓库关联远程仓库
+
+此时，因为是第二甚至更多设备关联此远程仓库，所以是在一个有文件的仓库中关联到本地，那么有以下几个操作步骤：
+
+``` git
+1.
+git init # 初始化仓库
+
+2.
+git remote add github [github-URL]	# 本地仓库关联 github 远程仓库
+git remote add gitee [gitee-URL]	# 本地仓库关联 gitee 远程仓库
+
+3.
+git remote -v	# 查看关联远程仓库信息
+
+4.
+# 下面两条指令二选一
+git pull github main:mastr	# 拉取远程 github 仓库文件至本地
+git pull gitee master:mastr	# 拉取远程 github 仓库文件至本地
+
+5.
+git branch --set-upstream-to=origin/master mastr # 本地master设置为远程master  此条指令可以不用，目前未用到
+
+6.
+git status 	# 查看有改动的文件和文件夹
+
+7.
+git add . 	# 工作区改动的文件和文件夹添加至暂存区
+
+8.
+git commit -m "添加的注释"	# 暂存区文件提交至本地仓库
+
+9.
+git push github master:main	 # 本地仓库推送至 github 远程仓库
+git push gitee master:master # 本地仓库推送至 gitee 远程仓库
+```
+
+
+
+2. 克隆远程仓库至本地
+
+在本地克隆远程仓库。
+
+```git
+1.
+git clone [URL] 	# 克隆远程仓库地址
+
+2.
+git pull			# 修改之前先拉取远程仓库文件
+git status			# 克隆之后，做修改后，查看修改文件和文件夹
+git add .			# 添加修改文件和文件夹至暂存区
+git commit -m ""	# 提交至本地仓库
+
+3.
+git push			# 将本地仓库推动到远程
+```
+
+
 
 
 
@@ -263,5 +332,11 @@ $ git push gitee master
 git pull --allow-unrelated-histories
 git push --allow-unrelated-histories
 git merge master --allow-unrelated-histories
+```
+
+## 2. 强制推送
+
+```git
+git push -f
 ```
 
