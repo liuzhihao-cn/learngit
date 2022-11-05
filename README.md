@@ -18,6 +18,7 @@ GitHub 与 Gitee 使用同一个本地仓
 以 Windows10 系统为例，安装 git 后，任意空白位置点击右键，会显示有 git 相关内容。
 
 ![Win10安装git-右键](E:\Git\testgit\fig\Win10安装git-右键.png)
+![Win10安装git-右键](https://github.com/liuzhihao-cn/learngit/blob/main/fig/%E5%90%AF%E5%8A%A8git.png)
 
 ### 基本操作指令
 
