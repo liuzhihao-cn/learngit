@@ -242,7 +242,9 @@ $ git push github main
 $ git push gitee master
 ```
 
+![推送GitHub](E:\Git\testgit\fig\推送GitHub.png)
 
+![推送Gitee](E:\Git\testgit\fig\推送Gitee.png)
 
 
 
