@@ -229,7 +229,7 @@ $ git push -u gitee master					# 下载 Gitee 远程仓库 master 分支代码
 
 `$ git remote -v` 查看仓库连接情况。
 
-![关联至远程仓库](E:\Git\testgit\fig\关联至远程仓库.png)
+![关联至远程仓库](.\fig\关联至远程仓库.png)
 
 ```git
 $ git init
